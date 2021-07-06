@@ -48,6 +48,9 @@ p {
   font-size: 15px;
   opacity: 0.8;
 }
+.title-box {
+  margin: 30px;
+}
 .box {
   background-color: #fff;
   padding: 30px;
@@ -156,6 +159,12 @@ a {
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
+  }
+  .title-box {
+    margin: 10px;
+  }
+  .box {
+    padding: 20px;
   }
   h1 {
     text-align: center;
