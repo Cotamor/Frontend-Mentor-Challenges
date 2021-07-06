@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  /* ### Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  /* ### Neutral */
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--LightGray);
+}
+
+h2 {
+  color: var(--Cyan);
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.box h3 {
+  color: var(--BrightYellow);
+}
+.box p {
+  opacity: 0.4;
+  line-height: 27px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 630px;
+  min-height: 100vh;
+}
+
+.box {
+  background-color: #fff;
+  padding: 35px;
+  width: 100%;
+  border-radius: 7px 7px 0 0;
+}
+
+.box-with-inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  color: var(--LightGray);
+}
+
+.inner {
+  background-color: var(--Cyan);
+  padding: 35px;
+  width: 100%;
+  border-radius: 0 0 0 7px;
+}
+.inner strong {
+  font-size: 32px;
+  margin-right: 5px;
+}
+
+.inner > div {
+  display: flex;
+  align-items: center;
+}
+
+.inner button {
+  border-radius: 5px;
+  border: none;
+  background-color: var(--BrightYellow);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.09);
+  display: block;
+  font-size: 17px;
+  color: #fff;
+  font-family: inherit;
+  width: 100%;
+  padding: 15px 25px;
+}
+.inner p {
+  margin-bottom: 30px;
+}
+
+.about {
+  background-color: #4abebd;
+  border-radius: 0 0 7px 0;
+}
+li {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    margin: 50px 30px;
+  }
+  .box-with-inner {
+    flex-direction: column;
+  }
+
+  .inner {
+    border-radius: 0;
+  }
+  .about {
+    border-radius: 0 0 7px 7px;
+  }
+}
