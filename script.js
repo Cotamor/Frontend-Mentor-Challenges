@@ -4,6 +4,7 @@ const projects = [
   { name: "intro-component-with-signup-form" },
   { name: "single-price-grid-component" },
   { name: "ping-coming-soon-page" },
+  { name: "huddle-landing-page" },
 ];
 
 const list = document.getElementById("list");
