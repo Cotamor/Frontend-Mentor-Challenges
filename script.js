@@ -5,6 +5,7 @@ const projects = [
   { name: "single-price-grid-component" },
   { name: "ping-coming-soon-page" },
   { name: "huddle-landing-page" },
+  { name: "huddle-single-page" },
 ];
 
 const list = document.getElementById("list");
