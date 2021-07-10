@@ -6,6 +6,7 @@ const projects = [
   { name: "ping-coming-soon-page" },
   { name: "huddle-landing-page" },
   { name: "huddle-single-page" },
+  { name: "fylo-landing-page" },
 ];
 
 const list = document.getElementById("list");
