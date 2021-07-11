@@ -7,6 +7,7 @@ const projects = [
   { name: "huddle-landing-page" },
   { name: "huddle-single-page" },
   { name: "fylo-landing-page" },
+  { name: "insure-landing-page" },
 ];
 
 const list = document.getElementById("list");
