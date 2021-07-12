@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  /* ### Primary */
+  --LinearGradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  /* ### Neutral */
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 1px;
+  background-color: var(--VeryLightGrayishBlue);
+  min-height: 100vh;
+  z-index: 0;
+}
+body::before {
+  position: absolute;
+  content: "";
+  margin: 0;
+  background-image: url("./images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+body::after {
+  position: absolute;
+  content: "";
+  margin: 0;
+  background-image: url("./images/bg-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -2;
+}
+
+h1 {
+  color: var(--GrayishBlue);
+}
+
+h3 {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+li {
+  font-size: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+li:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+span {
+  color: var(--LightGrayishBlue);
+}
+
+.container {
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price {
+  color: var(--DarkGrayishBlue);
+  font-size: 65px;
+  margin: 0;
+  width: 250px;
+}
+
+.price-box {
+  background-color: #fff;
+  border-radius: 10px;
+  color: var(--GrayishBlue);
+  margin: 0 0 60px;
+  padding: 30px;
+}
+.price-box-premium {
+  background: var(--LinearGradient);
+  color: #fff;
+  padding: 50px 30px;
+}
+.price-box-premium .price {
+  color: #fff;
+}
+.price-box-premium li {
+  border-bottom: 1px solid var(--LightGrayishBlue);
+}
+.price-box-premium li:first-child {
+  border-top: 1px solid var(--LightGrayishBlue);
+}
+
+.btn {
+  background: var(--LinearGradient);
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  padding: 14px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  height: 44px;
+  width: 270px;
+  /* border: 1px solid var(--GrayishBlue); */
+}
+.btn:hover {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid var(--LightGrayishBlue);
+}
+.btn-premium {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+.btn-premium:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.header {
+  margin-bottom: 50px;
+  color: var(--LightGrayishBlue);
+}
+.toggle-container {
+  position: relative;
+  margin: 0 20px;
+  width: 60px;
+  height: 34px;
+}
+.toggle-container input {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--LinearGradient);
+  transition: all 0.4s ease;
+  border-radius: 50px;
+}
+.slider:hover {
+  opacity: 0.5;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  bottom: 2px;
+  left: 2px;
+  width: 29px;
+  height: 30px;
+  background-color: white;
+  z-index: 10;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  /* background-color: tomato; */
+}
+input:checked + .slider::before {
+  transform: translateX(28px);
+}
+@media screen and (max-width: 1024px) {
+  .price {
+    width: 200px;
+    font-size: 50px;
+  }
+  .btn {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .flex-main {
+    flex-direction: column;
+  }
+  .price {
+    width: 280px;
+    font-size: 65px;
+  }
+  .btn {
+    width: 270px;
+  }
+  .price-box {
+    margin: 0 0 25px;
+  }
+  .price-box-premium {
+    padding: 30px;
+  }
+}
