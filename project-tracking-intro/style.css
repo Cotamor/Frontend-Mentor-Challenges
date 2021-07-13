@@ -104,6 +104,9 @@ li {
 .links {
   display: flex;
 }
+.unicorn {
+  position: relative;
+}
 .burger {
   display: none;
 }
@@ -151,19 +154,6 @@ p {
   font-size: 1.1em;
   margin-top: 0;
   margin-bottom: 50px;
-}
-
-.modal {
-  display: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 10vh;
-  left: 100%;
-  background-color: #fff;
-  width: 80vw;
-  height: 270px;
-  z-index: 10;
-  /* transition: transform 0.4s ease; */
 }
 
 @media screen and (max-width: 992px) {
@@ -223,13 +213,53 @@ p {
     max-width: 400px;
     transform: scale(0.8) translateX(-5%);
   }
+
   .links {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transform: translateX(-200%);
+    margin: 0 20px;
+    padding: 20px 0;
+    top: 100px;
+    left: 0;
+    width: calc(100vw - 40px);
+    z-index: 10;
+    transition: transform 0.4s ease;
+  }
+  .nav-show .links {
+    transform: translateX(0);
+  }
+
+  .unicorn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -20px);
+    width: 400px;
+    height: 1px;
+  }
+  .links li {
+    margin: 20px 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  .close {
+    display: none;
+    cursor: pointer;
+  }
+
+  .nav-show .burger {
     display: none;
   }
-  .burger.show {
-    display: block;
-  }
-  .close.show {
+  .nav-show .close {
     display: block;
   }
   .btn {
@@ -247,34 +277,5 @@ p {
   .copy {
     font-size: 0.9em;
     letter-spacing: 1;
-  }
-
-  /* Modal */
-  .modal.show {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    /* transition: transform 0.4s ease; */
-  }
-  .mobile-links {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .mobile-links li {
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 25px;
-    margin-left: 0;
-    width: 300px;
-  }
-  .mobile-links li:last-child {
-    border-top: 1px solid rgba(128, 128, 128, 0.5);
-    padding-top: 20px;
-    margin-bottom: 0;
   }
 }
