@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+:root {
+  /* ### Primary */
+  --StrongCyan: hsl(171, 66%, 44%);
+  --LightBlue: hsl(233, 100%, 69%);
+  /* ### Neutral */
+  --DarkGrayishBlue: hsl(210, 10%, 33%);
+  --GrayishBlue: hsl(201, 11%, 66%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  margin: 0;
+  font-size: 1.2em;
+  color: var(--GrayishBlue);
+}
+h1,
+h2,
+h3 {
+  color: var(--DarkGrayishBlue);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+}
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 18px;
+}
+p {
+  color: var(--GrayishBlue);
+  line-height: 1.6;
+}
+
+h1 + p {
+  font-size: 1.05em;
+}
+h2 + p {
+  font-size: 0.98em;
+}
+h3 + p {
+  font-size: 0.85em;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style-type: none;
+}
+.container {
+  width: 750px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+}
+.container-M {
+  width: 900px;
+}
+.container-L {
+  width: 1200px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex > div {
+  flex: 1;
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.btn {
+  padding: 16px 30px;
+  margin: 0 10px 30px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn-green {
+  background-color: var(--StrongCyan);
+}
+.btn-purple {
+  background-color: var(--LightBlue);
+}
+section {
+  padding: 30px 0;
+}
+/* main */
+main {
+  background-image: url(./images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 30px 0;
+}
+.header-logo {
+  margin: 40px 0;
+}
+main p {
+  margin-bottom: 40px;
+}
+
+/* Feature Keep track*/
+.feature1 .flex {
+  margin: 80px 0;
+}
+.feature1 .flex > div:first-child {
+  flex: 1.2;
+}
+.feature1 .flex > div {
+  flex: 0.8;
+}
+.computer-img {
+  transform: translateX(-40%) scale(1.4);
+}
+.box-left {
+}
+.box-right {
+  text-align: start;
+}
+
+/* Feature Access*/
+.feature2 p {
+  margin-bottom: 60px;
+}
+.device-img {
+  margin-top: 50px;
+  transform: scale(1.3);
+}
+
+/* Feature Superchage*/
+.flex.cards {
+  align-items: start;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 30px 20px;
+}
+.cards .card:first-child img {
+  margin: 26px;
+}
+.card img {
+  margin: 30px 0;
+}
+
+/* Feature Sponsor*/
+
+/* Feature Download*/
+
+/* Footer */
+footer {
+  background-color: #f5f6f8;
+}
+footer .container {
+  padding: 40px;
+}
+
+.footer-logo {
+  width: 50px;
+}
+footer .flex {
+  align-items: flex-start;
+}
+
+.link {
+  text-align: left;
+}
+.link li {
+  font-size: 0.9em;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.social {
+  display: flex;
+  align-self: center;
+}
+.social li {
+  margin-right: 20px;
+}
+.social li:last-child {
+  margin-right: 0;
+}
+.social i {
+  color: var(--DarkGrayishBlue);
+  font-size: 25px;
+}
+
+.social i:hover {
+  color: var(--StrongCyan);
+}
+
+@media screen and (max-width: 1024px) {
+  .device-img {
+    transform: scale(1.1);
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 1em;
+  }
+  main {
+    padding: 0;
+  }
+  section {
+    padding: 20px 0;
+  }
+
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .btn {
+    margin-bottom: 10px;
+  }
+  /* main */
+
+  /* keep track */
+  .feature1 .flex {
+    margin: 0;
+  }
+  .computer-img {
+    transform: scale(1) translateX(0);
+  }
+  .box-left {
+    margin-bottom: 40px;
+  }
+  .box-right {
+    text-align: center;
+  }
+  /* Access */
+  .device-img {
+    transform: scale(1.1);
+  }
+  /* Superchager */
+  .flex.cards {
+    align-items: center;
+  }
+  /* sponsor */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  /* download */
+
+  /* footer */
+  footer .flex {
+    align-items: center;
+  }
+  .link {
+    text-align: center;
+  }
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+  .link li {
+    margin-bottom: 30px;
+  }
+}

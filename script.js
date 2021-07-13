@@ -10,6 +10,7 @@ const projects = [
   { name: "insure-landing-page" },
   { name: "pricing-component" },
   { name: "project-tracking-intro" },
+  { name: "clipboard-landing-page" },
 ];
 
 const list = document.getElementById("list");
