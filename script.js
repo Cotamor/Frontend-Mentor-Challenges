@@ -11,7 +11,6 @@ const projects = [
   { name: "pricing-component" },
   { name: "project-tracking-intro" },
   { name: "clipboard-landing-page" },
-  { name: "job-listing-with-react" },
   { name: "rock-paper-scissors" },
 ];
 
