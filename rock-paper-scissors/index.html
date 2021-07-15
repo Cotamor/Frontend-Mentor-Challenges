@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <div class="showRules flex-col">
+    <h2>RULES</h2>
+    <img src="./images/image-rules.svg" alt="image-rules">
+    <img class="icon-close" id='btn-close' src="./images/icon-close.svg" alt="icon-close">
+  </div>
+
+  <div class="container">
+
+    <header>
+      <div class="title">
+        <img class="logo" src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="score">
+        <h4>score</h4>
+        <p id='scoreNum'>0</p>
+      </div>
+    </header>
+  </div>
+  <div class="container-main">
+    <main>
+      <div class="start">
+        <div class="flex box">
+          <button id="paper" class="flex icon-box paper"></button>
+          <button id='scissors' class="flex icon-box scissors"></button>
+        </div>
+        <div class="box origin">
+          <button id='rock' class="flex icon-box rock"></button>
+        </div>
+      </div>
+
+      <div class="battle hide">
+        <div class="flex box">
+          <div class="flex-col you">
+            <h3>you picked</h3>
+            <button id="youPick" class="flex icon-box">
+
+            </button>
+          </div>
+          <div class="result hide">
+            <h2 id='whatTheResult'>you win!</h2>
+            <button id="play" class="btn">play again</button>
+          </div>
+          <div class="flex-col house">
+            <h3>the house picked</h3>
+            <button id="housePick" class="flex icon-box blank">
+
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <footer>
+    <button id='btn-rules' class="btn btn-small">rules</button>
+  </footer>
+
+
+</body>
+
+</html>
+<!-- Score
+Rules
+
+You Picked
+The House Picked
+
+You Win
+You Lose
+
+Play Again -->

@@ -12,6 +12,7 @@ const projects = [
   { name: "project-tracking-intro" },
   { name: "clipboard-landing-page" },
   { name: "job-listing-with-react" },
+  { name: "rock-paper-scissors" },
 ];
 
 const list = document.getElementById("list");
